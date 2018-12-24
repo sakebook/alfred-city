@@ -1,0 +1,3 @@
+rootProject.name = 'alfred-city'
+enableFeaturePreview('GRADLE_METADATA')
+

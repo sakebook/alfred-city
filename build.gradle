@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+        maven { url "https://dl.bintray.com/kotlin/kotlin-dev/" }
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:1.3.11"
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://dl.bintray.com/kotlin/kotlinx/" }
+    maven { url "https://dl.bintray.com/kotlin/kotlin-dev/" }
+}
+
+apply plugin: 'kotlin-platform-native'
+apply plugin: 'kotlinx-serialization-native'
+
+group 'com.github.sakebook'
+version '0.0.1-SNAPSHOT'
+
+sourceSets.main {
+    component {
+        outputKinds = [EXECUTABLE]
+        targets = ['macos_x64']
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.0"
+}
