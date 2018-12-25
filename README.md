@@ -21,7 +21,7 @@ kexe path
 ## run example
 
 ```sh
-./build/exe/main/release/alfred-city.kexe 13 workflow/are.json
+./build/exe/main/release/alfred-city.kexe 13 workflow/area.json
 ```
 
 ## workflow
